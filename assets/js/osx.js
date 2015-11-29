@@ -12,39 +12,22 @@ jQuery(function ($) {
 	var OSX = {
 		container: null,
 		init: function () {
-        if(window.location.hash) {
-          var hash = window.location.hash.substring(1);
-          if (hash="hail"){
-            $("#osx-modal-content").modal({
-              overlayId: 'osx-overlay',
-              containerId: 'osx-container',
-              closeHTML: null,
-              minHeight: 80,
-              opacity: 65, 
-              position: ['0',],
-              overlayClose: true,
-              onOpen: OSX.open,
-              onClose: OSX.close
-            });            
-          }
+      if(window.location.hash) {
+        var hash = window.location.hash.substring(1);
+        if (hash="hail"){
+          $("#osx-modal-content").modal({
+            overlayId: 'osx-overlay',
+            containerId: 'osx-container',
+            closeHTML: null,
+            minHeight: 80,
+            opacity: 65, 
+            position: ['0',],
+            overlayClose: true,
+            onOpen: OSX.open,
+            onClose: OSX.close
+          });            
         }
-      /*
-			$("input.osx, a.osx").click(function (e) {
-				e.preventDefault();	
-
-				$("#osx-modal-content").modal({
-					overlayId: 'osx-overlay',
-					containerId: 'osx-container',
-					closeHTML: null,
-					minHeight: 80,
-					opacity: 65, 
-					position: ['0',],
-					overlayClose: true,
-					onOpen: OSX.open,
-					onClose: OSX.close
-				});
-			});
-      */
+      }
 		},
 		open: function (d) {
 			var self = this;
